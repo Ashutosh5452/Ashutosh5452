@@ -1,23 +1,23 @@
 name: 22f2000770@ds.study.iitm.ac.in
 
 on:
-schedule:
-- cron: ‘0 12 * * *’ # Runs daily at 12:00 PM UTC
-workflow_dispatch: # This allows manual trigger
+  schedule:
+    - cron: '0 12 * * *' # Runs daily at 12:00 PM UTC
+  workflow_dispatch: # Allows manual trigger
 
 jobs:
-commit:
-runs-on: ubuntu-latest
+  commit:
+    runs-on: ubuntu-latest
 
-steps:
-- name: 22f2000770@ds.study.iitm.ac.in
-  uses: actions/checkout@v2
+    steps:
+      - name: 22f2000770@ds.study.iitm.ac.in
+        uses: actions/checkout@v2
 
-- name: Make a dummy change with email 22f2000770@ds.study.iitm.ac.in in the commit
-  run: |
-    echo "This is a daily commit" > daily_commit.txt
-    git config --global user.email "22f2000770@ds.study.iitm.ac.in"
-    git config --global user.name "22f2000770"
-    git add daily_commit.txt
-    git commit -m "Daily commit from 22f2000770@ds.study.iitm.ac.in"
-    git push
+      - name: Make a dummy change with email 22f2000770@ds.study.iitm.ac.in in the commit
+        run: |
+          echo "This is a daily commit" > daily_commit.txt
+          git config --global user.email "22f2000770@ds.study.iitm.ac.in"
+          git config --global user.name "22f2000770"
+          git add daily_commit.txt
+          git commit -m "Daily commit from 22f2000770@ds.study.iitm.ac.in"
+          git push
